@@ -4,9 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
+html, body, #root {
   height: 100%;
   width: 100%;
 }
@@ -19,8 +17,7 @@ main {
   gap: 1rem;
 }
 
-main .left,
-main .right {
+main .left, main .right {
   height: 100%;
   flex-basis: 50%;
   border-radius: 0.7rem;
@@ -31,9 +28,7 @@ main .left {
   position: relative;
 }
 
-.left .code,
-.code pre,
-.code pre code {
+.left .code, .code pre, .code pre code {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -52,12 +47,118 @@ main .left .review {
   cursor: pointer;
   user-select: none;
   border-radius: 0.7rem;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
+main .left .review:hover {
+  background-color: rgb(205, 205, 255);
+  transform: translateY(-1px);
+}
+
+main .left .review:active {
+  transform: translateY(0);
+}
+
+main .left .review:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
 
 main .right {
   background-color: #343434;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   overflow: auto;
+  color: #ffffff;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  main .left, main .right {
+    flex-basis: auto;
+    height: auto;
+  }
+  
+  main .left {
+    height: 50vh;
+    min-height: 300px;
+  }
+  
+  main .right {
+    height: 50vh;
+    min-height: 300px;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  main .left .review {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 0.5rem;
+  }
+  
+  main .left {
+    height: 40vh;
+    min-height: 250px;
+  }
+  
+  main .right {
+    height: 40vh;
+    min-height: 250px;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  main .left .review {
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .left .code div {
+    font-size: 14px !important;
+  }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 320px) {
+  main {
+    padding: 0.3rem;
+  }
+  
+  main .left {
+    height: 35vh;
+    min-height: 200px;
+  }
+  
+  main .right {
+    height: 35vh;
+    min-size: 200px;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  
+  main .left .review {
+    padding: 0.2rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  
+  .left .code div {
+    font-size: 12px !important;
+  }
 }
