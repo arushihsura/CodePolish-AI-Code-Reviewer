@@ -14,3 +14,7 @@ CodePolish is an AI-powered web application that analyzes your code, detects com
 🧪 Debug small code snippets before committing
 🎓 Learn from AI-generated suggestions and explanations
 💻 Integrate into your own dev workflow for quick code checks
+
+
+Backend Deployment: https://codepolish-ai-code-reviewer.onrender.com/
+Frontend Deployment: https://code-polish-ai-code-reviewer.vercel.app/
