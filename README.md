@@ -1,4 +1,5 @@
 🤖 CodePolish – Let AI Refine Your Code 🤖
+
 CodePolish is an AI-powered web application that analyzes your code, detects common mistakes, and suggests polished, corrected versions — all in seconds. Whether you're a student, a solo dev, or just learning to code, CodePolish helps you write cleaner, smarter, and error-free code with the help of Gemini AI.
 
 ✨ Features:
